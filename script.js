@@ -121,7 +121,7 @@ var count_arr = 0;
 //function click for button "flip"
 function toss() {
 
-    if (count_t == 5) {
+    if (count_t == 4) {
         setTimeout(setWinner, 3000);
         setTimeout(GameWinner, 3000);
         setTimeout(openModal, 4000);
