@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coinflip</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="frontpage" id="bg_frontpage">
+        <!--modal-container-->
+        <div class="modal-container" id="modal_container">
+            <!--modal when game finish-->
+            <div class="modal">
+                <h1>GAME OVER</h1>
+                <div class="finalWinner" id="finalWinner"></div>
+                <button class="btnModal" data-modal="close">CLOSE</button>
+                <button class="btnModal" data-modal="reset">NEW GAME</button>
+            </div>
+        </div>
+        <div class="modal-container" id="modal_container_welcome">
+            <!--modal when game finish-->
+            <div class="modal">
+                <h1>WELCOME TO COINFLIP</h1>
+                <span>Game mode set in first to win 5 rounds<br></span>
+                <button class="btnModal" data-modal="closeModalInitial">LETS START</button>
+            </div>
+        </div>
+        <div class="modal-container" id="modal_container_error">
+            <!--modal error if player dont pick "head" or "tail"-->
+            <div class="modal">
+                <h1>Choose One Side First!</h1>
+                <button class="btnModal" data-modal="closeError">OK</button>
+            </div>
+        </div>
+        <div class="modal-container" id="modal_container_full">
+            <!--modal error if player dont pick "head" or "tail"-->
+            <div class="modal">
+                <h1>List of "lastest games" is full<br>Please clear list!</h1>
+                <button class="btnModal" id="clearReset">Clear and Reset</button>
+            </div>
+        </div>
+        <!--panel to change background-->
+        <div class="bg_switch">
+            <div class="bg_control" id="bgControl">
+                <span class="bg_txt">Background:</span>
+                <button class="bg_btn" id="bg_1">1</button>
+                <button class="bg_btn" id="bg_2">2</button>
+                <button class="bg_btn" id="bg_3">3</button>
+            </div>
+        </div>
+        <!--Game title-->
+        <header>
+            <span class="title">COINFLIP GAME</span>
+        </header>
+
+        <!--player1/computer-->
+        <div class="players">
+            <div class="player">
+                <h4>PLAYER 1</h4>
+                <div class="score" id="scorePlayer">Score: 0</div>
+                <img src="assets/player1.png" class="profile">
+            </div>
+            <!--Coin-->
+            <div class="resultCoin" id="coin">
+                <div class="heads">
+                    <img src="" alt="">
+                </div>
+                <div class="tails">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <!--div coin ends here-->
+            <div class="player">
+                <h4>COMPUTER</h4>
+                <div class="score" id="scoreComputer">Score: 0 </div>
+                <img src="assets/computer.png" class="profile">
+            </div>
+        </div>
+        <!--div previous rolls-->
+        <div class="bg_rolls" id="">
+            <div class="rolls_previousRolls" id="printRolls">
+                <span class="subtitle" id="subtitle"> PREVIOUS ROLLS: </span>
+                <div class="previousRolls" id="rolls"></div>
+            </div>
+        </div>
+        <!--div previous rolls ends here-->
+
+        <!--buttons/messages-->
+        <div class="container">
+            <!--print final winner-->
+            <div class="printResult" id="print"></div>
+            <div class="chooseSide" id="chooseSideCoin"></div>
+            <div class="btnChoose" id="btnChooseStyle">
+                <span class="span" id="spanTxt">Player 1 choose:</span>
+                <button class="coinFace" id="head" value="0">Head</button>
+                <button class="coinFace" id="tail" value="1">Tail</button>
+            </div>
+            <div class="finalWinnerScreen" id="finalWinnerScreen"></div>
+            <button class="flip" id="flip" type="btn">Flip the Coin</button>
+            <button class="btnModal" data-modal="resetAll" id="resetAll">RESET</button>
+            <div class="roundWinner" id="roundWinner"></div>
+            <!--Count total de rondas and round winner-->
+            <div class="countTotal" id="countTotal"></div>
+        </div>
+    </section>
+
+    <!--Lastest Games and list-->
+    <section class="container">
+        <div class="savedGames">
+            <h3>Lastest Games</h3>
+        </div>
+        <div class="previousWinner" id="winners">
+        </div>
+        <div class="list" id="listGames"></div>
+        <button class="btnClear" id="clear">Clear</button>
+    </section>
+
+    <!--javascript-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,525 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bg_switch {
+    display: flex;
+    justify-content: flex-end;
+    margin: 4px 4px;
+}
+
+.bg_controlSwitch {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Andale Mono, monospace;
+}
+
+.bg_control {
+    background-color: white;
+    color: black;
+    padding: 3px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Andale Mono, monospace;
+
+}
+
+.bg_btn {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+.whiteCover {
+    background-color: white;
+
+}
+
+.frontpage {
+    background-image: url('assets/background4.png');
+    background-size: cover;
+
+}
+
+.dark {
+    background-image: url('https://wallpapercave.com/wp/wp2757874.gif');
+    background-size: cover;
+
+}
+
+.white {
+    background-image: url('https://wallpapercave.com/wp/wp3284851.gif');
+    background-size: cover;
+
+}
+
+.containWhite {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 9px;
+    padding: 5px;
+    font-family: Andale Mono, monospace;
+    font-size: 13px;
+
+}
+
+.whiteTxt {
+    color: white;
+    font-family: Andale Mono, monospace;
+
+}
+
+.countTotalWhite {
+    color: white;
+    font-family: Andale Mono, monospace;
+    padding-bottom: 15px;
+}
+
+.blackTxt {
+    color: black;
+    font-family: Andale Mono, monospace;
+
+}
+
+.title {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 4px;
+    margin: 0px 100px 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Andale Mono, monospace;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+
+}
+
+.players {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    font-family: Andale Mono, monospace;
+    margin: 0px 50px 40px;
+
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    width: 11%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px 60px 30px;
+    border-radius: 10%;
+
+}
+
+.player h4 {
+    padding: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    background-color: rgb(245, 245, 245);
+}
+
+.profile {
+    width: 55%;
+    max-width: 170px;
+    min-width: 50px;
+
+}
+
+.score {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: Andale Mono, monospace;
+
+}
+
+.resultCoin {
+    display: flex;
+    justify-content: center;
+    min-width: 8rem;
+    height: 8rem;
+    margin-top: 50px;
+    transform-style: preserve-3d;
+    align-items: center;
+    position: relative;
+}
+
+.resultCoin div {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    position: absolute;
+
+}
+
+.heads {
+    background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.icone-png.com%2Fpng%2F14%2F14009.png&f=1&nofb=1");
+    background-size: cover;
+
+}
+
+.tails {
+    background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F1%2Fa%2Fk%2Fu%2FI%2Fd%2Fcoin-md.png&f=1&nofb=1");
+    background-size: cover;
+    transform: rotateY(-180deg);
+
+}
+
+.animate-heads {
+    animation: flipHeads 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes flipHeads {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1800deg);
+    }
+}
+
+.animate-heads-reset {
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes flipHeads {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1800deg);
+    }
+}
+
+.animate-tails {
+    animation: flipTails 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes flipTails {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1980deg);
+    }
+}
+
+.printResult {
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #000;
+    font-size: 30px;
+    font-family: Andale Mono, monospace;
+
+}
+
+.rolls_previousRolls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.previousRolls {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.previousRolls .imgCoin {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: Andale Mono, monospace;
+
+}
+
+.btnChoose {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    padding-bottom: 30px;
+    font-size: 19px;
+    font-family: Andale Mono, monospace;
+    font-weight: bold;
+
+}
+
+.column {
+    flex-direction: column;
+
+}
+
+.chooseSide {
+    padding-bottom: 5px;
+    font-family: Andale Mono, monospace;
+    color: #000;
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+}
+
+.coinFace {
+    padding: 2px 9px;
+    color: black;
+    font-weight: bold;
+    font-family: Andale Mono, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+.flip {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 40px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    font-family: Andale Mono, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+.btnModal {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 20px;
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    font-family: Andale Mono, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+.btnClear {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 20px;
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    font-family: Andale Mono, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 20px 0px 15px;
+
+}
+
+.resultCoin,
+.countTotal {
+    font-family: Andale Mono, monospace;
+    color: #000;
+
+}
+
+.countTotal {
+    margin-bottom: 15px;
+}
+
+.roundWinner {
+    font-family: Andale Mono, monospace;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+}
+
+.finalWinnerScreen {
+    border-radius: 10px;
+    padding: 5px;
+    font-family: Andale Mono, monospace;
+    font-size: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+
+}
+
+.modal-container {
+    position: absolute;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    justify-content: center;
+    font-family: Andale Mono, monospace;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.modal {
+    background-color: white;
+    width: 40%;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Andale Mono, monospace;
+
+}
+
+.modal .btnModal {
+    background-color: aquamarine;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+
+.modal h1 {
+    margin: 0;
+    font-family: Andale Mono, monospace;
+
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container h3 {
+    font-family: Andale Mono, monospace;
+
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 10%;
+    max-width: 100%;
+
+}
+
+.game {
+    display: inline;
+    text-align: center;
+    margin: auto;
+    min-width: 40%;
+    max-width: 100%;
+
+}
+
+.game .imgRoll {
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+
+}
+
+.game span {
+    justify-content: center;
+    font-family: Andale Mono, monospace;
+    align-items: center;
+    display: flex;
+    gap: 12px;
+
+}
+
+@media(min-width:1920px) {
+    .frontpage {
+        min-height: 90vh;
+
+    }
+}
+
+@media(max-width:1000px) {
+    .player .score {
+        font-size: 15px;
+    }
+
+    .player h4 {
+        font-size: 15px;
+        width: 70px;
+    }
+}
+
+@media(max-width:800px) {
+    .resultCoin div {
+        width: 50%;
+        height: 50%;
+    }
+    .title{
+        font-size: 30px;
+    }
+}
