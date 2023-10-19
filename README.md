@@ -2,6 +2,8 @@
 
 Coinflip Game
 
+!! https://ricardosilva1010.github.io/coinflip-game/ !!
+
 Coinflip Game em Javascript.
 
 Jogo de CARA ou COROA contra o Computador.
